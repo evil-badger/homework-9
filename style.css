@@ -17,10 +17,24 @@ ul{
     font-size: 0;
 }
 
+
+.list-item:hover .list-link{
+    background-color: rgb(68, 68, 255);
+}
+
+.sublist-item:hover .sublist-link{
+    background-color: rgb(49, 47, 47);
+}
+
 .list-item{
     display: inline-block;
     vertical-align: top;
     font-size: 16px;
+    position: relative;
+}
+
+.list-item:hover .sublist{
+    display: block;
 }
 
 .list-link{
@@ -36,26 +50,52 @@ ul{
 }
 
 
+.sublist{
+    position: absolute;
+    display: none; 
+    width: 250px;
+}
+
 .sublist-link{
     text-decoration: none;
     display: block;
     background-color: rgb(68, 68, 255);
     color: rgb(233, 217, 217);
-    padding: 20px 30px;
+    padding: 30px 72px;
 }
 
 .sublist-link:hover{
     background-color: rgb(49, 47, 47);
 }
 
+.sublist-item{
+    position: relative;
+}
+
 .subsublist-link{
     text-decoration: none;
     display: block;
-    background-color: rgb(68, 68, 255);
+    background-color: rgb(182, 152, 97);
     color: rgb(233, 217, 217);
-    padding: 20px 30px;
+    padding: 30px 60px;
+    text-align: center;
 }
 
 .subsublist-link:hover{
     background-color: rgb(49, 47, 47);
+}
+
+
+.subsublist{
+    position: absolute;
+    display: none;
+    width: 200px;
+    top:0; 
+    left: 250px;
+    right:0; 
+    bottom:0;
+}
+
+.sublist-item:hover .subsublist{
+    display: block;
 }
